@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>map array method</title>
+  </head>
+
+  <body>
+    <p>map array method</p>
+    
+    <script>
+      // adds 1 to each element without using a for loop
+      // outputs: 2,3,4,5,6
+        const arr=[1,2,3,4,5];
+        function addOne(num){
+            return num+1;
+        }
+        addOne(arr);
+        const mapArr=arr.map(addOne);
+        console.log(mapArr);
+    </script>
+  </body>
+
+</html>
