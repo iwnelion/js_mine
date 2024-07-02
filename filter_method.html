@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>filter method</title>
+  </head>
+
+  <body>
+    <p>filter method</p>
+    <p>the filter method expects the callback to return either true or false. it true, the value is included
+        in the output. otherwise, it isn't.
+    </p>
+    
+    <script>
+        function isOdd(num){
+            return num%2!==0;
+        }
+        const arr=[1,2,3,4,5];
+        const oddNum=arr.filter(isOdd);
+        console.log(oddNum);
+        console.log(arr);
+        // output
+        // [1,3,5]
+        // [1,2,3,4,5]
+    </script>
+  </body>
+
+</html>
