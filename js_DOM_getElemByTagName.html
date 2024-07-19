@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript HTML DOM</title>
+</head>
+<body>
+    <p>this finds the element by tag name.</p>
+    <p>getElementsByTagName method: </p>
+    <p id="demo"></p>
+    <script>
+        const element=document.getElementsByTagName("p");
+        document.getElementById("demo").innerHTML='the text in the first paragraph (index 0) is: '+
+        element[0].innerHTML;
+    </script>
+</body>
+</html>
