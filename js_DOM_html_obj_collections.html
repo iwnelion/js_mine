@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript HTML DOM</title>
+</head>
+<body>
+    <p>finding html elements by html object collections</p>
+    <form id="frm1" action="/action_page_does_not_exist.php">
+        first name: <input type="text" name="fname" value="joana"><br/>
+        last name: <input type="text" name="lname" value="b"><br/><br/>
+        <input type="submit" id="submit">
+    </form>
+    <p>values from the form:</p>
+    <p id="demo"></p>
+    <script>
+        const x=document.forms["frm1"];
+        let text="";
+        for(let i=0;i<x.lenght;i++){
+            text+=x.elements[i].value+"<br>";
+        }
+        document.getElementById("demo").innerHTML=text;
+    </script>
+</body>
+</html>
