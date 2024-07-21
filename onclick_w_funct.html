@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS HTML DOM</title>
+</head>
+<body>
+    <h1>On click attribute (in a function)</h1>
+    <h2 onclick="changeText(this)">click here</h2>
+
+    <script>
+        function changeText(id){
+            id.innerHTML="oops";
+        }
+    </script>
+</body>
+</html>
