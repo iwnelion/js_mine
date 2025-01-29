@@ -7,3 +7,6 @@ http.createServer((req,res)=>{
         res.end()
     })
 }).listen(8000)
+//runs with: node simpleServer.js
+//see it at: localhost:8000
+//you will see the content of demofile.html
