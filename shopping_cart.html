@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart</title>
+</head>
+<body>
+    <label for="animal">Pick an animal: </label><br>
+    <select name="animal" id="animal">
+        <option value="dog">Dog 100</option>
+        <option value="cat">Cat 200</option>
+        <option value="bird">Bird 10</option>
+    </select><br>
+    <label for="quantity">Quantity: </label><br>
+    <input type="number" id="quantity">
+    <p id="result"></p>
+    <button type="submit" onclick="sub()">Submit</button>
+</body>
+<script>
+    function sub(){
+        let animal=document.getElementById("animal").value;
+        let quantity=document.getElementById("quantity").value;
+        if(quantity===""){
+            quantity=1;
+        }else if(quantity<1){
+            quantity=1;
+        }else{
+            quantity=parseInt(quantity);
+        }
+        let result=document.getElementById("result");
+        let tax=0.24;
+
+        if(animal==="dog"){
+            let dogPrice=100;
+            let dogQuant=dogPrice*quantity;
+            let priceTaxed=dogQuant*tax;
+            let finalPrice=dogQuant+priceTaxed;
+            result.innerHTML="You selected "+quantity+" "+animal+". Total price: "+finalPrice;
+        }else if(animal==="cat"){
+            let catPrice=200;
+            let catQuant=catPrice*quantity;
+            let priceTaxed=catQuant*tax;
+            let finalPrice=catQuant+priceTaxed;
+            result.innerHTML="You selected "+quantity+" "+animal+". Total price: "+finalPrice;
+        }else if(animal==="bird"){
+            let birdPrice=10;
+            let birdQuant=birdPrice*quantity;
+            let priceTaxed=birdQuant*tax;
+            let finalPrice=birdQuant+priceTaxed;
+            result.innerHTML="You selected "+quantity+" "+animal+". Total price: "+finalPrice;
+        }else{
+            result.innerHTML="Please select an animal";
+        }
+    }
+</script>
+</html>
